@@ -29,10 +29,11 @@ public class ProductService {
         existingProduct.setName(product.getName());
         existingProduct.setPrice(product.getPrice());
         existingProduct.setDescription(product.getDescription());
+        existingProduct.setCategory(product.getCategory());
         return productRepository.save(existingProduct);// Save the updated product
     }
 
-    public boolean deleteProduct(Long id) {
+    public boolean deleteProduct(String id) {
         if (!productRepository.existsById(id)) {
             return false;  // If product doesn't exist, return false
         }
