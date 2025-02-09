@@ -26,7 +26,7 @@ public class ProductService {
             return null;  // If product not found, return null
         }
         // Update product fields
-        existingProduct.setName(product.getName());
+        existingProduct.setTitle(product.getTitle());
         existingProduct.setPrice(product.getPrice());
         existingProduct.setDescription(product.getDescription());
         existingProduct.setCategory(product.getCategory());
